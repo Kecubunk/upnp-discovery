@@ -12,10 +12,15 @@ def parseMessage(data):
     for line in rest_lines:
         try:
             str_line = line
-            (key, dirty_value) = str_line.split(':', 1)
+            tokens = str_line.split(':', 1)
+            if len(tokens) < 2:
+                continue
+            (key, dirty_value) = tokens
             value = re.sub(r'^\s', '', dirty_value)
         except Exception as e:
             logger.error(e)
+            logger.error(str_line.split(':', 1))
+            logger.error(lines)
         else:
             headers[key] = value
 
