@@ -26,7 +26,9 @@ class DeviceNotifyServer(DatagramProtocol):
         message = utils.parseMessage(datagram)
         if(constants.notifyRe.match(message['method'])):
             if(self.filter_function(message)):
-                logger.info("device announcement: ", datagram, address)
+                ip, port = address
+                logger.info("device announcement: {0},{1}".format(ip, port))
+                logger.info(datagram)
                 if(self.notify_callback is not None):
                     self.notify_callback(message, address)
 
@@ -44,7 +46,9 @@ class DeviceSearchResponse(DatagramProtocol):
     def datagramReceived(self, datagram, address):
         message = utils.parseMessage(datagram)
         if(constants.responseRe.match(message['method'])):
-            logger.info("device RESPONSE: ", datagram, address)
+            ip, port = address
+            logger.info("device RESPONSE: {0},{1}".format(ip, port))
+            logger.info(datagram)
             if(self.callback is not None):
                 self.callback(message, address)
 
@@ -58,7 +62,8 @@ class ControlPoint(ReactorManager):
 
     # Client helpers
     def send_msearch(self, search, callback):
-        port = reactor.listenUDP(0, DeviceSearchResponse(callback=callback), interface=self.iface)
+        port = reactor.listenUDP(9998, DeviceSearchResponse(
+            callback=callback), interface=self.iface)
         logger.info("Sending M-SEARCH...")
         msg = self.getSearchMessage(search=search)
         port.write(utils.build_message(msg), (constants.SSDP_ADDR, constants.SSDP_PORT))

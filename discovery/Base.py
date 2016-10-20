@@ -16,4 +16,5 @@ class ReactorManager:
         self.reactor_runner()
 
     def stop(self):
-        reactor.stop()
+        if(reactor.running):
+            reactor.stop()

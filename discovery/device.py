@@ -28,7 +28,8 @@ class SearchServer(DatagramProtocol):
                 self.send_response(address)
 
     def send_response(self, address):
-        logger.debug("Sending response")
+        ip, port = address
+        logger.info("Sending response: {0},{1}".format(ip, port))
         msg = self.device.getResponseMessage()
         self.transport.write(utils.build_message(msg), address)
 """
@@ -77,10 +78,10 @@ class Device(ReactorManager):
         return headers
 
     def send_notify(self):
-        logger.debug("Sending NOTIFY...") 
+        logger.debug("Sending NOTIFY...")
         # msg = NO % (SSDP_ADDR, SSDP_PORT)
         msg = self.getNotifyMessage()
-        port = reactor.listenUDP(0, DatagramProtocol(), interface=self.iface)
+        port = reactor.listenUDP(9999, DatagramProtocol(), interface=self.iface)
         port.write(utils.build_message(msg), (constants.SSDP_ADDR, constants.SSDP_PORT))
         port.stopListening()
 
@@ -97,5 +98,4 @@ class Device(ReactorManager):
 
     def start(self):
         reactor.callWhenRunning(self.start_discovery_server)
-        reactor.addSystemEventTrigger('before', 'shutdown', self.stop)
         self.reactor_runner()
