@@ -77,7 +77,7 @@ class Device(ReactorManager):
         return headers
 
     def send_notify(self):
-        logger.debug("Sending NOTIFY...")
+        logger.debug("Sending NOTIFY...") 
         # msg = NO % (SSDP_ADDR, SSDP_PORT)
         msg = self.getNotifyMessage()
         port = reactor.listenUDP(0, DatagramProtocol(), interface=self.iface)
@@ -98,9 +98,4 @@ class Device(ReactorManager):
     def start(self):
         reactor.callWhenRunning(self.start_discovery_server)
         reactor.addSystemEventTrigger('before', 'shutdown', self.stop)
-        reactor.run()
-
-    def stop(self):
-        self.loopingCall.stop()
-        self.multicastPort.leaveGroup(constants.SSDP_ADDR, interface=self.iface)
-        self.multicastPort.stopListening()
+        self.reactor_runner()

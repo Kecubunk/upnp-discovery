@@ -103,7 +103,3 @@ class ControlPoint(ReactorManager):
     def stop_listening(self):
         self.multicastPort.leaveGroup(constants.SSDP_ADDR, interface=self.iface)
         self.multicastPort.stopListening()
-
-    def stop(self):
-        self.stop_searching()
-        self.stop_listening()
