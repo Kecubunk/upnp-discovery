@@ -41,7 +41,6 @@ class DeviceSearchResponse(DatagramProtocol):
 
     def __init__(self, callback=None):
         self.callback = callback
-        pass
 
     def datagramReceived(self, datagram, address):
         message = utils.parseMessage(datagram)
@@ -55,14 +54,16 @@ class DeviceSearchResponse(DatagramProtocol):
 
 class ControlPoint(ReactorManager):
 
-    def __init__(self, iface):
+    def __init__(self, iface, listener_port=None):
         super(ControlPoint, self).__init__()
         self.iface = iface
+        self.listener_port = listener_port
         self.notify_callback = None
 
     # Client helpers
     def send_msearch(self, search, callback):
-        port = reactor.listenUDP(9998, DeviceSearchResponse(
+
+        port = reactor.listenUDP(self.listener_port, DeviceSearchResponse(
             callback=callback), interface=self.iface)
         logger.info("Sending M-SEARCH...")
         msg = self.getSearchMessage(search=search)
@@ -81,6 +82,8 @@ class ControlPoint(ReactorManager):
 
     # Client API
     def start_searching(self, search=None, callback=None, interval=None):
+        if self.listener_port is None:
+            raise TypeError('listener_port must be set')
         search_fn = lambda: self.send_msearch(search=search, callback=callback)
 
         if interval is not None:
