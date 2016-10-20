@@ -17,4 +17,7 @@ class ReactorManager:
 
     def stop(self):
         if(reactor.running):
-            reactor.stop()
+            try:
+                reactor.stop()
+            except:
+                pass
