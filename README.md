@@ -42,10 +42,10 @@ def ready():
     cp.start_searching(search=device_type, callback=device_responded, interval=10)
 
 # Attach the bootstrap function
-obj.when_ready(ready)
+cp.when_ready(ready)
 
 # Initialized the service
-obj.start()
+cp.start()
 ```
 
 
