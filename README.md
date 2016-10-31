@@ -36,10 +36,10 @@ def device_responded(message, address):
 # A bootstrap function to be called when the service is running
 def ready():
     # Set a filter to only return devices that match the set type
-    obj.start_listening(
+    cp.start_listening(
         filter_function=lambda m: m.get('NT') == device_type)
     # Begin sending search messages every 10 seconds
-    obj.start_searching(search=device_type, callback=device_responded, interval=10)
+    cp.start_searching(search=device_type, callback=device_responded, interval=10)
 
 # Attach the bootstrap function
 obj.when_ready(ready)
