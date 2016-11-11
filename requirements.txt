@@ -1,5 +1,10 @@
 service-identity==16.0.0
 Twisted==16.4.1
+
+#testing
 flake8>=2.5.4
 nose2>=0.6.3
+cov-core>=1.15.0
+tox>=2.3.1
+sure>=1.2.24
 
