@@ -1,0 +1,3 @@
+service-identity==16.0.0
+Twisted==16.4.1
+

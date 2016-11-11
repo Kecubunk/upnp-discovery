@@ -1,0 +1,16 @@
+actionid: py35
+msg: installpkg
+cmdargs: ['/Users/dbarnhar/Development/oneId/discoveryTest/discovery/.tox/py35/bin/pip', 'install', '-U', '--no-deps', '/Users/dbarnhar/Development/oneId/discoveryTest/discovery/.tox/dist/upnp_discovery-0.1.zip']
+env: {'TERM_SESSION_ID': 'w0t0p1:9CE1F589-C086-47CB-9D88-E06553E228D8', 'ITERM_PROFILE': 'Default', 'PWD': '/Users/dbarnhar/Development/oneID/discoveryTest/discovery', 'SSH_KEY_PATH': '~/.ssh/github_rsa', 'PYENV_ROOT': '/Users/dbarnhar/.pyenv', 'USER': 'dbarnhar', 'PATH': '/Users/dbarnhar/Development/oneId/discoveryTest/discovery/.tox/py35/bin:/Users/dbarnhar/.pyenv/versions/3.5.0/bin:/usr/local/Cellar/pyenv/20160726/libexec:/Users/dbarnhar/.pyenv/shims:/Users/dbarnhar/.pyenv/shims:/Users/dbarnhar/.rbenv/shims:/Users/dbarnhar/.nvm/versions/node/v6.9.1/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin', 'XPC_SERVICE_NAME': '0', 'LSCOLORS': 'Gxfxcxdxbxegedabagacad', '__CF_USER_TEXT_ENCODING': '0x38769FF3:0x0:0x0', 'PYENV_SHELL': 'zsh', 'PYENV_DIR': '/Users/dbarnhar/Development/oneID/discoveryTest/discovery', 'PYENV_VERSION': '3.5.0', 'LOGNAME': 'dbarnhar', 'ITERM_SESSION_ID': 'w0t0p1:9CE1F589-C086-47CB-9D88-E06553E228D8', 'TERM_PROGRAM_VERSION': '3.0.12', 'NVM_PATH': '/Users/dbarnhar/.nvm/versions/node/v6.9.1/lib/node', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.MAkISJEBS4/Listeners', 'VIRTUAL_ENV': '/Users/dbarnhar/Development/oneId/discoveryTest/discovery/.tox/py35', 'MANPATH': '/Users/dbarnhar/.nvm/versions/node/v6.9.1/share/man:/usr/local/share/man:/usr/share/man:/Applications/Xcode.app/Contents/Developer/usr/share/man:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/share/man', 'HOME': '/Users/dbarnhar', 'LESS': '-R', 'NVM_DIR': '/Users/dbarnhar/.nvm', 'PYTHONHASHSEED': '424634816', 'TMPDIR': '/var/folders/71/v9zwvfx90xb0wyv5zt962q3rw7d7zl/T/', 'LANG': 'en_US.UTF-8', 'LC_CTYPE': 'en_US.UTF-8', 'SHLVL': '1', 'PYENV_HOOK_PATH': '/Users/dbarnhar/.pyenv/pyenv.d:/usr/local/Cellar/pyenv/20160726/pyenv.d:/usr/local/etc/pyenv.d:/etc/pyenv.d:/usr/lib/pyenv/hooks', 'COMMAND_MODE': 'unix2003', 'NVM_NODEJS_ORG_MIRROR': 'https://nodejs.org/dist', 'ZSH': '/Users/dbarnhar/.oh-my-zsh', 'SHELL': '/bin/zsh', 'PAGER': 'less', 'TERM_PROGRAM': 'iTerm.app', 'NVM_BIN': '/Users/dbarnhar/.nvm/versions/node/v6.9.1/bin', 'SECURITYSESSIONID': '186a7', 'XPC_FLAGS': '0x0', 'TERM': 'xterm-256color', 'NVM_IOJS_ORG_MIRROR': 'https://iojs.org/dist', 'COLORFGBG': '7;0', 'Apple_PubSub_Socket_Render': '/private/tmp/com.apple.launchd.ZsdyisUj9d/Render'}
+
+Processing ./.tox/dist/upnp_discovery-0.1.zip
+Building wheels for collected packages: upnp-discovery
+  Building wheel for upnp-discovery failed: [Errno 13] Permission denied: '/Users/dbarnhar/Library/Caches/pip/wheels/c7'
+Failed to build upnp-discovery
+Installing collected packages: upnp-discovery
+  Found existing installation: upnp-discovery 0.1
+    Uninstalling upnp-discovery-0.1:
+      Successfully uninstalled upnp-discovery-0.1
+  Running setup.py install for upnp-discovery: started
+    Running setup.py install for upnp-discovery: finished with status 'done'
+Successfully installed upnp-discovery-0.1

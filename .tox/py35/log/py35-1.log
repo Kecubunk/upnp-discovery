@@ -1,0 +1,40 @@
+actionid: py35
+msg: getenv
+cmdargs: ['/Users/dbarnhar/Development/oneId/discoveryTest/discovery/.tox/py35/bin/pip', 'install', '-rrequirements.txt']
+env: {'TERM_SESSION_ID': 'w0t0p1:9CE1F589-C086-47CB-9D88-E06553E228D8', 'COMMAND_MODE': 'unix2003', 'PYENV_SHELL': 'zsh', 'PAGER': 'less', 'PATH': '/Users/dbarnhar/Development/oneId/discoveryTest/discovery/.tox/py35/bin:/Users/dbarnhar/.pyenv/versions/3.5.0/bin:/usr/local/Cellar/pyenv/20160726/libexec:/Users/dbarnhar/.pyenv/shims:/Users/dbarnhar/.pyenv/shims:/Users/dbarnhar/.rbenv/shims:/Users/dbarnhar/.nvm/versions/node/v6.9.1/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin', 'PYENV_VERSION': '3.5.0', 'USER': 'dbarnhar', 'MANPATH': '/Users/dbarnhar/.nvm/versions/node/v6.9.1/share/man:/usr/local/share/man:/usr/share/man:/Applications/Xcode.app/Contents/Developer/usr/share/man:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/share/man', 'LESS': '-R', 'NVM_PATH': '/Users/dbarnhar/.nvm/versions/node/v6.9.1/lib/node', 'LOGNAME': 'dbarnhar', 'SHELL': '/bin/zsh', 'TERM': 'xterm-256color', 'NVM_NODEJS_ORG_MIRROR': 'https://nodejs.org/dist', 'NVM_DIR': '/Users/dbarnhar/.nvm', 'PYENV_ROOT': '/Users/dbarnhar/.pyenv', 'COLORFGBG': '7;0', 'XPC_SERVICE_NAME': '0', 'TERM_PROGRAM': 'iTerm.app', 'LC_CTYPE': 'en_US.UTF-8', '__CF_USER_TEXT_ENCODING': '0x38769FF3:0x0:0x0', 'TMPDIR': '/var/folders/71/v9zwvfx90xb0wyv5zt962q3rw7d7zl/T/', 'SECURITYSESSIONID': '186a7', 'PWD': '/Users/dbarnhar/Development/oneID/discoveryTest/discovery', 'TERM_PROGRAM_VERSION': '3.0.12', 'HOME': '/Users/dbarnhar', 'LSCOLORS': 'Gxfxcxdxbxegedabagacad', 'VIRTUAL_ENV': '/Users/dbarnhar/Development/oneId/discoveryTest/discovery/.tox/py35', 'LANG': 'en_US.UTF-8', 'NVM_IOJS_ORG_MIRROR': 'https://iojs.org/dist', 'ZSH': '/Users/dbarnhar/.oh-my-zsh', 'NVM_BIN': '/Users/dbarnhar/.nvm/versions/node/v6.9.1/bin', 'ITERM_PROFILE': 'Default', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.MAkISJEBS4/Listeners', 'PYTHONHASHSEED': '3342400627', 'ITERM_SESSION_ID': 'w0t0p1:9CE1F589-C086-47CB-9D88-E06553E228D8', 'XPC_FLAGS': '0x0', 'SHLVL': '1', 'Apple_PubSub_Socket_Render': '/private/tmp/com.apple.launchd.ZsdyisUj9d/Render', 'SSH_KEY_PATH': '~/.ssh/github_rsa', 'PYENV_DIR': '/Users/dbarnhar/Development/oneID/discoveryTest/discovery', 'PYENV_HOOK_PATH': '/Users/dbarnhar/.pyenv/pyenv.d:/usr/local/Cellar/pyenv/20160726/pyenv.d:/usr/local/etc/pyenv.d:/etc/pyenv.d:/usr/lib/pyenv/hooks'}
+
+Collecting service-identity==16.0.0 (from -r requirements.txt (line 1))
+  Using cached service_identity-16.0.0-py2.py3-none-any.whl
+Collecting Twisted==16.4.1 (from -r requirements.txt (line 2))
+  Using cached Twisted-16.4.1.tar.bz2
+Collecting pyopenssl>=0.12 (from service-identity==16.0.0->-r requirements.txt (line 1))
+  Using cached pyOpenSSL-16.2.0-py2.py3-none-any.whl
+Collecting attrs (from service-identity==16.0.0->-r requirements.txt (line 1))
+  Using cached attrs-16.2.0-py2.py3-none-any.whl
+Collecting pyasn1 (from service-identity==16.0.0->-r requirements.txt (line 1))
+  Using cached pyasn1-0.1.9-py2.py3-none-any.whl
+Collecting pyasn1-modules (from service-identity==16.0.0->-r requirements.txt (line 1))
+  Using cached pyasn1_modules-0.0.8-py2.py3-none-any.whl
+Collecting zope.interface>=4.0.2 (from Twisted==16.4.1->-r requirements.txt (line 2))
+  Using cached zope.interface-4.3.2-cp35-cp35m-macosx_10_9_x86_64.whl
+Collecting six>=1.5.2 (from pyopenssl>=0.12->service-identity==16.0.0->-r requirements.txt (line 1))
+  Using cached six-1.10.0-py2.py3-none-any.whl
+Collecting cryptography>=1.3.4 (from pyopenssl>=0.12->service-identity==16.0.0->-r requirements.txt (line 1))
+  Downloading cryptography-1.5.3-cp35-cp35m-macosx_10_10_x86_64.whl (1.4MB)
+Requirement already satisfied: setuptools in ./.tox/py35/lib/python3.5/site-packages (from zope.interface>=4.0.2->Twisted==16.4.1->-r requirements.txt (line 2))
+Collecting cffi>=1.4.1 (from cryptography>=1.3.4->pyopenssl>=0.12->service-identity==16.0.0->-r requirements.txt (line 1))
+  Using cached cffi-1.8.3-cp35-cp35m-macosx_10_10_x86_64.whl
+Collecting idna>=2.0 (from cryptography>=1.3.4->pyopenssl>=0.12->service-identity==16.0.0->-r requirements.txt (line 1))
+  Using cached idna-2.1-py2.py3-none-any.whl
+Collecting pycparser (from cffi>=1.4.1->cryptography>=1.3.4->pyopenssl>=0.12->service-identity==16.0.0->-r requirements.txt (line 1))
+  Using cached pycparser-2.17.tar.gz
+Building wheels for collected packages: Twisted, pycparser
+  Building wheel for Twisted failed: [Errno 13] Permission denied: '/Users/dbarnhar/Library/Caches/pip/wheels/0e/53'
+  Building wheel for pycparser failed: [Errno 13] Permission denied: '/Users/dbarnhar/Library/Caches/pip/wheels/a8'
+Failed to build Twisted pycparser
+Installing collected packages: six, pyasn1, pycparser, cffi, idna, cryptography, pyopenssl, attrs, pyasn1-modules, service-identity, zope.interface, Twisted
+  Running setup.py install for pycparser: started
+    Running setup.py install for pycparser: finished with status 'done'
+  Running setup.py install for Twisted: started
+    Running setup.py install for Twisted: finished with status 'done'
+Successfully installed Twisted-16.4.1 attrs-16.2.0 cffi-1.8.3 cryptography-1.5.3 idna-2.1 pyasn1-0.1.9 pyasn1-modules-0.0.8 pycparser-2.17 pyopenssl-16.2.0 service-identity-16.0.0 six-1.10.0 zope.interface-4.3.2
